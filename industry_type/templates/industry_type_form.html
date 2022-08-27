@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <fieldset>
+            <legend><h1>Create New Industry Type</h1></legend>
+            {{ form.as_p }}
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit" class="btn btn-primary">
+
+    </form>
+
+{% endblock content %}

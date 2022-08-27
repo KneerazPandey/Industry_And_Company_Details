@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'company-display' %}"><h2>Home</h2></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'industry-type' %}">Create New Industry Type</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'company-detail' %}">Create New Company Details</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" method="get" action="{% url 'search-show' %}">
+        <input class="form-control mr-sm-2" name="q"  type="text" placeholder="Industry type search..... " required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>

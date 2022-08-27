@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if companies %}
+        <h1>Displaying all the available result</h1>
+        {% for company in companies %}
+            <div class="row">
+                <div class="column">
+                    <p><b>Company Name:-</b> {{ company.name }}</p>
+                    <p><b>Company Owner Name:-</b> {{ company.owner_name }}</p>
+                    <p><b>Company Address:-</b> {{ company.address }}</p>
+                    <p><b>Company Email:-</b> {{ company.email }}</p>
+                    <p><b>Company Contact Number:-</b> {{ company.contact }}</p>
+                    <p><b>Industry Type:-</b>{{ company.industry_type }}</p>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <h1>Not Result Found</h1>
+        <p>Search company again by industy type</p>
+    {% endif %}
+
+{% endblock content %}

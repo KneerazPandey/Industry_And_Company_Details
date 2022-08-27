@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Company Display Page</h1>
+    {% for industry in industry_type %}
+        <div class="row">  
+            <div class="column">
+                <div class="column">
+                    <h1>{{ industry.industry_type }}</h1>
+                    <hr>
+                    {% for company in industry.industry.all %}
+                    <div class="row">
+                        <div class="column">
+                            <p><b>Company Name:-</b> {{ company.name }}</p>
+                            <p><b>Company Owner Name:-</b> {{ company.owner_name }}</p>
+                            <p><b>Company Address:-</b> {{ company.address }}</p>
+                            <p><b>Company Email:-</b> {{ company.email }}</p>
+                            <p><b>Company Contact Number:-</b> {{ company.contact }}</p>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
